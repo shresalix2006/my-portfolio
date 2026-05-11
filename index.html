@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Shrestha Chatterjee — BTech CSE (AIML) at SRM IST, B.S Data Science at IIT Madras, President of Geek Room SRMIST. AI/ML Developer & Creative Coder." />
+  <title>Shrestha Chatterjee | Portfolio</title>
+  <link rel="icon" type="image/png" href="https://img.icons8.com/isometric-line/50/EC4899/sci-fi.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- Canvas for Particles -->
+  <canvas id="particleCanvas"></canvas>
+  <canvas id="fluid"></canvas>
+  <script src="splashCursor.js"></script>
+
+  <!-- Navigation -->
+  <nav class="nav" id="navbar">
+    <div class="nav-logo">
+      <span class="logo-bracket">&lt;</span>SC<span class="logo-bracket">/&gt;</span>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#hero" class="nav-link active" id="nav-hero">Home</a></li>
+      <li><a href="#about" class="nav-link" id="nav-about">About</a></li>
+      <li><a href="#education" class="nav-link" id="nav-education">Education</a></li>
+      <li><a href="#skills" class="nav-link" id="nav-skills">Skills</a></li>
+      <li><a href="#experience" class="nav-link" id="nav-experience">Experience</a></li>
+      <li><a href="#projects" class="nav-link" id="nav-projects">Projects</a></li>
+      <li><a href="#contact" class="nav-link" id="nav-contact">Contact</a></li>
+    </ul>
+    <button class="nav-cta" id="navCta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+      Let's Connect
+    </button>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="section hero" id="hero">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span> SC/
+      </div>
+      <h1 class="hero-title">
+        <span class="hero-greeting">Hey, I'm</span>
+        <span class="hero-name gradient-text">Shrestha Chatterjee</span>
+      </h1>
+      <p class="hero-subtitle typewriter" id="typewriter"></p>
+      <p class="hero-desc">
+        BTech CSE (AIML) at SRM IST · B.S Data Science at IIT Madras · Building real-world AI solutions across cybersecurity, motorsport analytics, and beyond.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary" id="heroViewWork">
+          <span>View My Work</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/shrestha-chatterjee-421a27332" target="_blank" class="btn btn-ghost" id="heroLinkedin">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-number" data-target="4">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Projects</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="5">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Certifications</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="100">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Community Members</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="avatar-wrapper">
+        <div class="avatar-ring"></div>
+        <div class="avatar-ring ring-2"></div>
+        <div class="avatar-glow"></div>
+        <div class="avatar-card">
+        <div class="avatar-card">
+          <img src="https://secure.gravatar.com/avatar/c7472b2fde0194416826dfaee3291c34d3b385c1aa9705786d87db11987dca26?s=400" onerror="this.src='shrestha_final.png'" alt="Shrestha Chatterjee" class="avatar-img">
+          <div class="avatar-code-snippet">
+          <div class="avatar-code-snippet">
+            <span class="code-line"><span class="kw">const</span> dev = {</span>
+            <span class="code-line">&nbsp;&nbsp;<span class="key">name</span>: <span class="str">'Shrestha'</span>,</span>
+            <span class="code-line">&nbsp;&nbsp;<span class="key">focus</span>: <span class="str">'AI / ML'</span>,</span>
+            <span class="code-line">&nbsp;&nbsp;<span class="key">role</span>: <span class="str">'President 🚀'</span></span>
+            <span class="code-line">};</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator" id="scrollIndicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="section" id="about">
+    <div class="section-header reveal">
+      <span class="section-tag">Who I Am</span>
+      <h2 class="section-title"><span class="gradient-text">About Me</span></h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-image-wrap reveal">
+        <div class="about-img-card">
+          <div class="about-img-inner">
+            <img src="https://secure.gravatar.com/avatar/c7472b2fde0194416826dfaee3291c34d3b385c1aa9705786d87db11987dca26?s=400" onerror="this.src='shrestha_final.png'" alt="Shrestha Chatterjee" class="about-avatar-img">
+            <div class="about-img-badge">
+              <span class="badge-dot pulse"></span>
+              Open to Opportunities
+            </div>
+          </div>
+          <div class="about-img-decor"></div>
+        </div>
+      </div>
+      <div class="about-content reveal">
+        <h3 class="about-heading">AI/ML Developer & <span class="gradient-text">Tech Community Leader</span></h3>
+        <p class="about-text">
+          Second-year BTech CSE (AIML) student at SRM IST Delhi-NCR, simultaneously pursuing a B.S in Data Science at IIT Madras — one of India's most rigorous hybrid programmes. Currently serving as President of Geek Room SRMIST, leading a 100+ member tech community.
+        </p>
+        <p class="about-text">
+          Passionate about building real-world AI solutions across domains from cybersecurity to motorsport analytics. Certified by IIT Madras, IBM, and HackerRank. Fluent in English, Hindi, Bengali, and working knowledge of French.
+        </p>
+        <div class="about-tags">
+          <span class="tag">🤖 AI / ML</span>
+          <span class="tag">📊 Data Science</span>
+          <span class="tag">🏎️ F1 Analytics</span>
+          <span class="tag">🔐 Cybersecurity</span>
+          <span class="tag">👥 Community Leader</span>
+          <span class="tag">☕ Coffee Enthusiast</span>
+        </div>
+        <div class="about-languages">
+          <h4 class="about-lang-title">Languages</h4>
+          <div class="lang-chips">
+            <span class="lang-chip"><span class="lang-flag">🇬🇧</span> English <span class="lang-level">Professional</span></span>
+            <span class="lang-chip"><span class="lang-flag">🇮🇳</span> Hindi <span class="lang-level">Professional</span></span>
+            <span class="lang-chip"><span class="lang-flag">🇮🇳</span> Bengali <span class="lang-level">Native</span></span>
+            <span class="lang-chip"><span class="lang-flag">🇫🇷</span> French <span class="lang-level">Basic</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EDUCATION ===== -->
+  <section class="section" id="education">
+    <div class="section-header reveal">
+      <span class="section-tag">My Journey</span>
+      <h2 class="section-title"><span class="gradient-text">Education Timeline</span></h2>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item reveal" id="edu-1">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="timeline-date">Aug 2024 – Jun 2028</div>
+          <h3 class="timeline-title">BTech — Computer Science & Engineering (AIML)</h3>
+          <p class="timeline-org">SRM Institute of Science & Technology, Delhi-NCR</p>
+          <p class="timeline-desc">Specialisation in Artificial Intelligence & Machine Learning. Building expertise in ML, deep learning, NLP, and computer vision.</p>
+          <div class="timeline-tags">
+            <span class="ptag">AI/ML</span>
+            <span class="ptag">Deep Learning</span>
+            <span class="ptag">NLP</span>
+          </div>
+        </div>
+      </div>
+      <div class="timeline-item reveal" id="edu-2">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="timeline-date">Sep 2024 – Present</div>
+          <h3 class="timeline-title">B.S — Data Science (Hybrid)</h3>
+          <p class="timeline-org">Indian Institute of Technology Madras (IITM)</p>
+          <p class="timeline-desc">One of India's premier hybrid data science programmes. Dual enrolment — one of few students simultaneously pursuing BTech AIML and B.Sc Data Science.</p>
+          <div class="timeline-tags">
+            <span class="ptag">IIT Madras</span>
+            <span class="ptag">Data Science</span>
+            <span class="ptag">Statistics</span>
+          </div>
+        </div>
+      </div>
+      <div class="timeline-item reveal" id="edu-3">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="timeline-date">Jun 2022 – Jun 2024</div>
+          <h3 class="timeline-title">Higher Secondary Certificate (Class XII)</h3>
+          <p class="timeline-org">Shri Shayatan School, Kolkata</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal" id="edu-4">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="timeline-date">Apr 2011 – Apr 2022</div>
+          <h3 class="timeline-title">ICSE (Class X)</h3>
+          <p class="timeline-org">Mahadevi Birla Shishu Vihar, Kolkata</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section class="section skills-section" id="skills">
+    <div class="section-header reveal">
+      <span class="section-tag">What I Know</span>
+      <h2 class="section-title"><span class="gradient-text">My Tech Stack</span></h2>
+    </div>
+    <div class="skills-grid reveal">
+      <!-- Languages & AI -->
+      <div class="skill-category">
+        <div class="skill-cat-header">
+          <span class="skill-cat-icon">💻</span>
+          <h3>Languages</h3>
+        </div>
+        <div class="skill-items">
+          <div class="skill-item" data-level="90">
+            <div class="skill-info"><span>Python</span><span class="skill-pct">90%</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:90%"></div></div>
+          </div>
+          <div class="skill-item" data-level="78">
+            <div class="skill-info"><span>C / C++</span><span class="skill-pct">78%</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:78%"></div></div>
+          </div>
+          <div class="skill-item" data-level="82">
+            <div class="skill-info"><span>SQL</span><span class="skill-pct">82%</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:82%"></div></div>
+          </div>
+          <div class="skill-item" data-level="75">
+            <div class="skill-info"><span>HTML / CSS</span><span class="skill-pct">75%</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:75%"></div></div>
+          </div>
+        </div>
+      </div>
+      <!-- AI / ML -->
+      <div class="skill-category">
+        <div class="skill-cat-header">
+          <span class="skill-cat-icon">🤖</span>
+          <h3>AI / ML</h3>
+        </div>
+        <div class="skill-items">
+          <div class="skill-item" data-level="85">
+            <div class="skill-info"><span>Scikit-learn</span><span class="skill-pct">85%</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:85%"></div></div>
+          </div>
+          <div class="skill-item" data-level="80">
+            <div class="skill-info"><span>TensorFlow / Keras</span><span class="skill-pct">80%</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:80%"></div></div>
+          </div>
+          <div class="skill-item" data-level="78">
+            <div class="skill-info"><span>OpenCV / NLTK</span><span class="skill-pct">78%</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:78%"></div></div>
+          </div>
+          <div class="skill-item" data-level="72">
+            <div class="skill-info"><span>HuggingFace</span><span class="skill-pct">72%</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:72%"></div></div>
+          </div>
+        </div>
+      </div>
+      <!-- Data & Tools -->
+      <div class="skill-category">
+        <div class="skill-cat-header">
+          <span class="skill-cat-icon">📊</span>
+          <h3>Data & Tools</h3>
+        </div>
+        <div class="skill-items">
+          <div class="skill-item" data-level="88">
+            <div class="skill-info"><span>Pandas / NumPy</span><span class="skill-pct">88%</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:88%"></div></div>
+          </div>
+          <div class="skill-item" data-level="80">
+            <div class="skill-info"><span>MySQL / SQLite</span><span class="skill-pct">80%</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:80%"></div></div>
+          </div>
+          <div class="skill-item" data-level="85">
+            <div class="skill-info"><span>Git & GitHub</span><span class="skill-pct">85%</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:85%"></div></div>
+          </div>
+          <div class="skill-item" data-level="78">
+            <div class="skill-info"><span>Streamlit / Flask</span><span class="skill-pct">78%</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:78%"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tech Logos Marquee -->
+    <div class="marquee-wrapper reveal">
+      <div class="marquee-track">
+        <div class="marquee-inner" id="marqueeInner">
+          <span class="marquee-item">Python</span>
+          <span class="marquee-item">TensorFlow</span>
+          <span class="marquee-item">Scikit-learn</span>
+          <span class="marquee-item">Keras</span>
+          <span class="marquee-item">OpenCV</span>
+          <span class="marquee-item">HuggingFace</span>
+          <span class="marquee-item">Pandas</span>
+          <span class="marquee-item">NumPy</span>
+          <span class="marquee-item">MySQL</span>
+          <span class="marquee-item">Streamlit</span>
+          <span class="marquee-item">Flask</span>
+          <span class="marquee-item">C++</span>
+          <span class="marquee-item">Kaggle</span>
+          <span class="marquee-item">Jupyter</span>
+
+          <!-- Duplicate for seamless loop -->
+          <span class="marquee-item">Python</span>
+          <span class="marquee-item">TensorFlow</span>
+          <span class="marquee-item">Scikit-learn</span>
+          <span class="marquee-item">Keras</span>
+          <span class="marquee-item">OpenCV</span>
+          <span class="marquee-item">HuggingFace</span>
+          <span class="marquee-item">Pandas</span>
+          <span class="marquee-item">NumPy</span>
+          <span class="marquee-item">MySQL</span>
+          <span class="marquee-item">Streamlit</span>
+          <span class="marquee-item">Flask</span>
+          <span class="marquee-item">C++</span>
+          <span class="marquee-item">Kaggle</span>
+          <span class="marquee-item">Jupyter</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE ===== -->
+  <section class="section" id="experience">
+    <div class="section-header reveal">
+      <span class="section-tag">What I Do</span>
+      <h2 class="section-title"><span class="gradient-text">Leadership & Experience</span></h2>
+    </div>
+    <div class="experience-grid">
+      <div class="exp-card reveal" id="exp-1">
+        <div class="exp-icon-wrap">
+          <span class="exp-icon">👑</span>
+        </div>
+        <div class="exp-content">
+          <div class="exp-header">
+            <div>
+              <h3 class="exp-title">President</h3>
+              <p class="exp-org">Geek Room SRMIST Delhi-NCR, Ghaziabad</p>
+            </div>
+            <span class="exp-date">Jan 2026 – Present</span>
+          </div>
+          <ul class="exp-list">
+            <li>Lead a <strong>100+ member</strong> student tech community focused on AI/ML, development, and competitive programming.</li>
+            <li>Organise workshops, hackathons, and industry speaker sessions — driving hands-on learning for peers.</li>
+            <li>Oversee project collaborations, mentorship programmes, and club operations across semesters.</li>
+          </ul>
+          <div class="exp-tags">
+            <span class="ptag">Leadership</span>
+            <span class="ptag">AI/ML</span>
+            <span class="ptag">Community Building</span>
+            <span class="ptag">Hackathons</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section class="section" id="projects">
+    <div class="section-header reveal">
+      <span class="section-tag">What I've Built</span>
+      <h2 class="section-title"><span class="gradient-text">Featured Projects</span></h2>
+    </div>
+    <div class="projects-grid">
+
+      <div class="project-card reveal featured" id="project-1">
+        <div class="project-featured-tag">⭐ Featured</div>
+        <div class="project-img-wrap">
+          <div class="project-img-placeholder" style="--c1:#ef4444;--c2:#f59e0b;">
+            <span>🏎️</span>
+          </div>
+          <div class="project-overlay">
+            <a href="https://github.com/shresalix2006/race-strategy" target="_blank" class="project-link-btn" aria-label="View Project">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+            </a>
+            <a href="https://github.com/shresalix2006/race-strategy" target="_blank" class="project-link-btn" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.866-.013-1.700-2.782.603-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.462-1.11-1.462-.908-.620.069-.608.069-.608 1.004.071 1.532 1.032 1.532 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.378.203 2.397.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.338 4.695-4.566 4.942.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-tags">
+            <span class="ptag">Python</span>
+            <span class="ptag">ML</span>
+            <span class="ptag">FastF1 API</span>
+            <span class="ptag">Streamlit</span>
+          </div>
+          <h3 class="project-title">AI Race Strategist</h3>
+          <p class="project-desc">AI-powered F1 race strategy engine analysing lap telemetry, tyre degradation & weather data. Gradient boosting model achieves accuracy within 1.4 laps of actual pit windows. Streamlit dashboard for real-time strategy visualisation.</p>
+        </div>
+      </div>
+
+      <div class="project-card reveal" id="project-2">
+        <div class="project-img-wrap">
+          <div class="project-img-placeholder" style="--c1:#7c3aed;--c2:#ec4899;">
+            <span>🔐</span>
+          </div>
+          <div class="project-overlay">
+            <a href="https://github.com/shresalix2006/Phishing-Detector" target="_blank" class="project-link-btn" aria-label="View Project">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+            </a>
+            <a href="https://github.com/shresalix2006/Phishing-Detector" target="_blank" class="project-link-btn" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.866-.013-1.700-2.782.603-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.462-1.11-1.462-.908-.620.069-.608.069-.608 1.004.071 1.532 1.032 1.532 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.378.203 2.397.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.338 4.695-4.566 4.942.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-tags">
+            <span class="ptag">Python</span>
+            <span class="ptag">NLP</span>
+            <span class="ptag">ML</span>
+            <span class="ptag">Flask</span>
+          </div>
+          <h3 class="project-title">Phishing URL Detector</h3>
+          <p class="project-desc">Phishing detection system using URL feature extraction + TF-IDF on page content. Random Forest achieved 97.1% accuracy on 50K URLs. Packaged as browser-extension-ready REST API via Flask.</p>
+        </div>
+      </div>
+
+      <div class="project-card reveal" id="project-3">
+        <div class="project-img-wrap">
+          <div class="project-img-placeholder" style="--c1:#06b6d4;--c2:#3b82f6;">
+            <span>🧬</span>
+          </div>
+          <div class="project-overlay">
+            <a href="https://github.com/shresalix2006/AI-Digital-Learning-Twin-" target="_blank" class="project-link-btn" aria-label="View Project">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+            </a>
+            <a href="https://github.com/shresalix2006/AI-Digital-Learning-Twin-" target="_blank" class="project-link-btn" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.866-.013-1.700-2.782.603-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.462-1.11-1.462-.908-.620.069-.608.069-.608 1.004.071 1.532 1.032 1.532 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.378.203 2.397.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.338 4.695-4.566 4.942.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-tags">
+            <span class="ptag">Python</span>
+            <span class="ptag">LLM</span>
+            <span class="ptag">Knowledge Graph</span>
+            <span class="ptag">Streamlit</span>
+          </div>
+          <h3 class="project-title">AI Learning Digital Twin</h3>
+          <p class="project-desc">Personalised AI tutor creating a 'digital twin' of a student's knowledge state. LLM-powered Q&A with adaptive testing. Knowledge graph (NetworkX) for topic dependency visualisation.</p>
+        </div>
+      </div>
+
+      <div class="project-card reveal" id="project-4">
+        <div class="project-img-wrap">
+          <div class="project-img-placeholder" style="--c1:#10b981;--c2:#14b8a6;">
+            <span>🔍</span>
+          </div>
+          <div class="project-overlay">
+            <a href="https://github.com/shresalix2006/Behaviour-Fingerprint-Database-Management-System" target="_blank" class="project-link-btn" aria-label="View Project">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+            </a>
+            <a href="https://github.com/shresalix2006/Behaviour-Fingerprint-Database-Management-System" target="_blank" class="project-link-btn" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.866-.013-1.700-2.782.603-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.462-1.11-1.462-.908-.620.069-.608.069-.608 1.004.071 1.532 1.032 1.532 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.378.203 2.397.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.338 4.695-4.566 4.942.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-tags">
+            <span class="ptag">MySQL</span>
+            <span class="ptag">Python</span>
+            <span class="ptag">DBMS</span>
+            <span class="ptag">Data Modelling</span>
+          </div>
+          <h3 class="project-title">Criminal Fingerprint Behaviour — DBMS</h3>
+          <p class="project-desc">Normalised relational database (3NF) linking fingerprint records to criminal profiles. Complex SQL queries for pattern matching and case linkage. Python CLI front-end for full-stack DBMS interaction.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== CERTIFICATIONS ===== -->
+  <section class="section" id="certifications">
+    <div class="section-header reveal">
+      <span class="section-tag">Verified Knowledge</span>
+      <h2 class="section-title"><span class="gradient-text">Certifications & Achievements</span></h2>
+    </div>
+    <div class="certs-grid">
+      <div class="cert-card reveal" id="cert-1">
+        <div class="cert-badge">🎓</div>
+        <div class="cert-body">
+          <h3>Foundation Level — Data Science</h3>
+          <p class="cert-issuer">IIT Madras</p>
+          <span class="cert-year">2025</span>
+        </div>
+      </div>
+      <div class="cert-card reveal" id="cert-2">
+        <div class="cert-badge">🐍</div>
+        <div class="cert-body">
+          <h3>Python (Basic)</h3>
+          <p class="cert-issuer">HackerRank</p>
+          <span class="cert-year">2025</span>
+        </div>
+      </div>
+      <div class="cert-card reveal" id="cert-3">
+        <div class="cert-badge">🤖</div>
+        <div class="cert-body">
+          <h3>Getting Started with AI</h3>
+          <p class="cert-issuer">IBM SkillsBuild</p>
+          <span class="cert-year">2026</span>
+        </div>
+      </div>
+      <div class="cert-card reveal" id="cert-4">
+        <div class="cert-badge">🧠</div>
+        <div class="cert-body">
+          <h3>AI for Everyone: Master the Basics</h3>
+          <p class="cert-issuer">IBM (AI0101EN)</p>
+          <span class="cert-year">2024</span>
+        </div>
+      </div>
+      <div class="cert-card reveal" id="cert-5">
+        <div class="cert-badge">📊</div>
+        <div class="cert-body">
+          <h3>Data Analytics with Python</h3>
+          <p class="cert-issuer">Self Taught</p>
+          <span class="cert-year">2024</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Achievements -->
+    <div class="achievements-wrap reveal">
+      <h3 class="achievements-title">🏆 Key Achievements</h3>
+      <div class="achievements-list">
+        <div class="achievement-item">
+          <span class="achievement-icon">🎯</span>
+          <p><strong>Dual enrolment</strong> — one of few students simultaneously pursuing BTech AIML at SRMIST and B.S Data Science at IIT Madras.</p>
+        </div>
+        <div class="achievement-item">
+          <span class="achievement-icon">👑</span>
+          <p><strong>Youngest President</strong> of Geek Room SRMIST in the club's history, overseeing 100+ members.</p>
+        </div>
+        <div class="achievement-item">
+          <span class="achievement-icon">📜</span>
+          <p>Completed <strong>IBM AI and IIT Madras Data Science</strong> certifications while in first year of undergraduate study.</p>
+        </div>
+        <div class="achievement-item">
+          <span class="achievement-icon">🌍</span>
+          <p><strong>Multilingual communicator</strong> — English, Hindi, Bengali (native), and French (working proficiency).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section contact-section" id="contact">
+    <div class="section-header reveal">
+      <span class="section-tag">Let's Connect</span>
+      <h2 class="section-title"><span class="gradient-text">Get In Touch</span></h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <p class="contact-intro">
+          I'm always open to discussing AI/ML projects, research collaborations, internship opportunities, or just geeking out about Formula 1 strategy. Let's connect!
+        </p>
+        <div class="contact-details">
+          <a href="mailto:chatterjeeshrestha020@gmail.com" class="contact-item" id="contactEmail">
+            <div class="contact-item-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </div>
+            <div>
+              <span class="contact-item-label">Email</span>
+              <span class="contact-item-value">chatterjeeshrestha020@gmail.com</span>
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/shrestha-chatterjee-421a27332" target="_blank" class="contact-item" id="contactLinkedin">
+            <div class="contact-item-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+            </div>
+            <div>
+              <span class="contact-item-label">LinkedIn</span>
+              <span class="contact-item-value">Shrestha Chatterjee</span>
+            </div>
+          </a>
+          <a href="https://gravatar.com/perfectionfurry3de50ee393" target="_blank" class="contact-item" id="contactGravatar">
+            <div class="contact-item-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8 0-.29.02-.58.05-.86.17-.18.42-.29.7-.29.21 0 .4.07.56.17.15.11.23.27.23.47 0 .28-.11.53-.28.71-.12.18-.18.39-.18.6 0 .61.49 1.1 1.1 1.1s1.1-.49 1.1-1.1c0-.21-.06-.41-.18-.6-.18-.18-.28-.43-.28-.71 0-.21.08-.37.23-.47.16-.1.35-.17.56-.17 2.22 0 4.02-1.8 4.02-4.02 0-.21.07-.4.17-.56.1-.15.26-.23.47-.23s.37.08.47.23c.12.18.18.39.18.6 0 2.22-1.8 4.02-4.02 4.02z"/></svg>
+            </div>
+            <div>
+              <span class="contact-item-label">Gravatar</span>
+              <span class="contact-item-value">perfectionfurry3de50ee393</span>
+            </div>
+          </a>
+          <div class="contact-item" id="contactLocation">
+            <div class="contact-item-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <span class="contact-item-label">Location</span>
+              <span class="contact-item-value">Ghaziabad, UP, India</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <form class="contact-form reveal" id="contactForm">
+        <div class="form-group">
+          <label for="nameInput">Your Name</label>
+          <input type="text" id="nameInput" placeholder="John Doe" required />
+        </div>
+        <div class="form-group">
+          <label for="emailInput">Your Email</label>
+          <input type="email" id="emailInput" placeholder="john@example.com" required />
+        </div>
+        <div class="form-group">
+          <label for="messageInput">Message</label>
+          <textarea id="messageInput" rows="5" placeholder="Let's discuss an AI project..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full" id="submitContact">
+          <span>Send Message</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+        </button>
+        <div class="form-success" id="formSuccess">
+          <span>✅ Message sent! I'll get back to you soon.</span>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <span class="logo-bracket">&lt;</span>SC<span class="logo-bracket">/&gt;</span>
+      </div>
+      <p class="footer-text">Crafted with ❤️ and lots of ☕ by Shrestha Chatterjee</p>
+      <p class="footer-copy">© 2026 Shrestha Chatterjee. All rights reserved.</p>
+      <p class="footer-attribution"><a target="_blank" href="https://icons8.com/icon/YExcuxJJFAVI/sci-fi">Sci-Fi</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
